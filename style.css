@@ -1,0 +1,173 @@
+:root {
+    /* (main heading, stats) */
+    --White: hsl(0, 0%, 100%);
+    /*  (main paragraph) */
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+    /* (stat headings) */
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+    /*  (main background) */
+    --Verydarkblue: hsl(233, 47%, 7%);
+    /* (card background) */
+    --Darkdesaturatedblue: hsl(244, 38%, 16%);
+    /* (accent) */
+    --Softviolet: hsl(277, 64%, 61%)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--Verydarkblue);
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 97.7vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.leftSide {
+    background-color: var(--Darkdesaturatedblue);
+    padding: 4.2rem 5rem;
+    width: 570px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.title {
+    color: var(--White);
+    padding-bottom: 20px;
+    word-spacing: 3px;
+    font-size: 22px;
+}
+
+.pragraph {
+    color: var(--Slightlytransparentwhite);
+    padding: 10px 0;
+    font-size: 15px;
+    line-height: 25px;
+    width: 95%;
+}
+
+
+
+.leftSide span {
+    color: var(--Softviolet);
+}
+
+
+
+.statistic {
+    display: flex;
+    flex-direction: row;
+    padding-top: 39px;
+    width: 80%;
+    justify-content: space-between;
+    color: var(--White);
+}
+
+.statistic h4 {
+    color: var(--Slightlytransparentwhite);
+    font-size: 15px;
+    font-weight: 100;
+
+}
+
+
+
+.rightSide {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    width: 500px;
+    height: 419px;
+    background-color: var(--Softviolet);
+    filter: brightness(65%);
+
+}
+
+.rightSide img {
+    opacity: .5;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media(max-width:375px) {
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .rightSide {
+        order: 0;
+        height: 281px;
+        margin-top: 2rem;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .attribution {
+        position: absolute;
+        left: 15%;
+        bottom: -14rem;
+    }
+
+    .leftSide {
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        order: 1;
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .title {
+        padding: 0 4px;
+        font-size: 15px;
+    }
+
+    .pragraph {
+        padding-top: 20px;
+    }
+
+    .statistic {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
